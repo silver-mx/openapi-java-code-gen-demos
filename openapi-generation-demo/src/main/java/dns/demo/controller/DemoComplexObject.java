@@ -34,11 +34,11 @@ public record DemoComplexObject(
         @Schema(description = "A long", minimum = "0", maximum = "100")
         long longInteger,
 
-        @PositiveOrZero
+        @Min(0) @Max(100)
         @Schema(description = "An int")
         int integer,
 
-        @PositiveOrZero
+        @Min(-10) @Max(10)
         @Schema(description = "A short")
         short aShort,
 
